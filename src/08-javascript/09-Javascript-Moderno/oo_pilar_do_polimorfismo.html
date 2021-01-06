@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Moderno</title>
+        <meta charset="UTF-8">
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <script type="text/babel">
+        
+
+            class Animal{
+                     constructor(cor, tamanho, peso){
+                        this.cor = cor  
+                        this.tamanho = tamanho
+                        this.peso = peso
+                     }// fim constructor
+
+                dormir(){
+                    console.log('Dormir')
+                }
+
+            } // fim Animal
+
+            class Passaro extends Animal{
+                constructor(bico, cor, tamanho, peso){
+                    super(cor, tamanho, peso)
+                    this.bico = bico
+                } // fim contructor
+                voar(){
+                    console.log('voar')
+                }
+            } // fim Passaro
+
+            class Papagaio extends Passaro{
+                constructor(sabeFalar, cor, tamanho, peso){
+                    super(sabeFalar, cor, tamanho, peso)
+                    this.sabeFalar = sabeFalar
+                
+                }
+
+                falar(){
+                    console.log('Falar')
+                }
+
+            } // fim Papagaio   
+
+            class Avestruz  extends Passaro{
+                constructor(){
+                    super('Grande', 'Preto', 250, 15000)
+                }
+
+                enterrarCabeça(){
+                    console.log('Enterra a cabeça')
+                }
+
+
+                voar(){
+                    console.log('Não sabe Voar')
+                }
+
+
+            } // fim Aveztrus
+
+            let papagaio = new Papagaio(true, 'Verde', 25, 350)
+            console.log(papagaio)
+
+            papagaio.voar()
+
+            let avestruz = new Avestruz()
+            avestruz.enterrarCabeça()
+            avestruz.voar()
+
+
+
+    
+
+        </script>
+
+    </head>
+    <body>
+        
+     
+
+
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+       
+        <script>
+
+            /*  AND &&
+            Retorna se todas as expressões forem verdadeiras 
+            if(2 == 2 && 3 >= 1 && 'a' == 'b'){
+                document.write("Verdadeiro")   
+            } else{
+                document.write("Falso")
+            }
+            */
+
+            /*   OU ||
+            Se um resultado for true, a expressão toda retorna verdadeira
+            if(2 == 2 && 3 >= 1 || 'a' || 'b'){
+                document.write("Verdadeiro")   
+            } else{
+                document.write("Falso")
+            }
+            */ 
+
+               /* Negação 
+           Inverte o resultado lógico, retornando verdadeiro
+            if(!(4 == 2) ){
+                document.write("Verdadeiro")   
+            } else{
+                document.write("Falso")
+            }
+            !*/ 
+            
+            
+            var nota = prompt('Digite a nota do aluno:')
+            var faltas = prompt("Digite a quantidade de faltas:")
+
+            var media = 7
+            var faltas_maximas = 15
+
+/*
+            if(nota >= media && faltas <= faltas_maximas){
+                document.write("Aluno Aprovado");
+            } else {
+                document.write("Aluno Reprovado");
+            }
+*/
+
+
+            // Operador ternário
+            var resultado = (nota >= media && faltas <= faltas_maximas) ? 'Aprovado' : 'Reporvado'
+
+            document.write(resultado)
+            
+
+        </script>
+
+
+    </head>
+    <body>
+        
+
+    </body>
+</html>

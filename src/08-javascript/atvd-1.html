@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Massa Corporal</title>
+
+    <script>
+
+        var nome = prompt("Digite seu nome :")
+        var altura = prompt("Digite sua altura em cm :")
+        var peso = prompt("Informe seu peso : ")
+        
+        var altura = parseFloat(altura)
+        var peso = parseFloat(peso)
+
+        altura = altura / 100
+
+        var imc = peso / (altura * altura)
+
+        var classificacao
+
+        if(imc < 16){
+            classificao = "Baixo peso muito grave"
+        }else if(imc >= 16 && imc  <= 16.99){
+            classificacao = "Baixo peso grave"
+        }else if(imc >= 17 && imc <= 18.48){
+            classificacao = "Baixo peso"
+        }else if(imc >= 18.50 && imc <= 24.99){
+            classificacao = "Peso normal"
+        }else if(imc >= 25 && imc <= 29.99){
+            classificacao = "Sobrepso"
+        }else if(imc >= 30 && imc <= 34.99){
+            classificacao = "Obesidade grau I"
+        }else if(imc >= 35 && imc <= 39.99){
+            classificacao = "Obesidade grau II"
+        }else{
+            classificacao = "Obsidade grau III"
+        }
+
+
+        document.write(nome + ' tem o indice de massa corporal : ' + imc + ' e está classificado como : ' + classificacao)
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

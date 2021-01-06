@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Moderno</title>
+        <meta charset="UTF-8">
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <script type="text/babel">
+        
+
+            class Animal{
+                     constructor(){
+                        this.cor = ''    
+                        this.tamanho = null
+                     }// fim constructor
+
+                dormir(){
+                    console.log('Dormir')
+                }
+
+            } // fim Animal
+
+
+
+            class Cachorro extends Animal{ 
+                constructor(){
+                    super()
+                    this.orelhas = 'Grandes e caidas'
+                } // fim contructor
+                correr(){
+                    console.log('correr')
+                }
+
+                rosnar(){
+                    console.log('rosnar')
+                }
+            } // fim Cachorro
+
+
+
+            class Passaro extends Animal{
+                constructor(){
+                    super()
+                    this.bico = 'curto'
+                } // fim contructor
+                voar(){
+                    console.log('voar')
+                }
+            } // fim Passaro
+
+            class Papagaio extends Passaro{
+                constructor(){
+                    super()
+                    this.sabeFalar = true
+                
+                }
+
+                falar(){
+                    console.log('Falar')
+                }
+
+
+            } // fim Papagaio   
+
+
+            let cachorro = new Cachorro()
+            let passaro = new Passaro()
+            let papagaio = new Papagaio()
+
+            cachorro.dormir()
+            passaro.dormir()
+            papagaio.falar()
+            papagaio.voar()
+
+        </script>
+
+    </head>
+    <body>
+        
+     
+
+
+    </body>
+</html>

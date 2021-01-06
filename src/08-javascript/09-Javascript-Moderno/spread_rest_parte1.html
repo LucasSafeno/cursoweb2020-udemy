@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Moderno</title>
+        <meta charset="UTF-8">
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <script type="text/babel">
+            // Contexto spread
+            let tituloArtigo = 'Como utilizar o operador REST/SPREAD'
+
+            console.log(tituloArtigo)
+
+            console.log(...tituloArtigo)
+
+            console.log([...tituloArtigo])
+
+            //arrays
+            let listaCursos1 = ['NodeJS e MongoDB', 'ES6, TypeScript e Angular 4']
+            let listaCursos2 = ['Multipltaforma Android e IOS', 'Introdução ao GNU/Linux']
+            let listaCursosCompleto = ['Web Completo', 'Android Completo', ...listaCursos1, ...listaCursos2]
+
+            console.log(listaCursosCompleto)
+
+            // contexto objeto
+
+            let pessoa = {
+                    nome: 'João',
+                    idade: 27,
+            }
+
+            let clone = {
+                endereco: 'Rua ABC',
+                ...pessoa
+            }
+
+            console.log(clone)
+        </script>
+
+    </head>
+    <body>
+        
+     
+
+
+    </body>
+</html>

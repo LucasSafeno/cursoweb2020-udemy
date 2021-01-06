@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Moderno</title>
+        <meta charset="UTF-8">
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <script type="text/babel">
+        
+            let produto = {
+                descricao: 'Notebook',
+                preco: 1800,
+                detalhes: {
+                    fabricante: 'abc',
+                    modelo: 'xyz'
+                }
+            }
+
+
+            //token
+            //array => []
+            //objetos => {}
+
+          //  let { descricao, preco } = produto
+
+            //let { descricao: d, preco: p, desconto = 5 } = produto // valor default
+            let { detalhes: {fabricante: f, modelo: m} } = produto
+            console.log(f, m)
+
+
+
+        </script>
+
+    </head>
+    <body>
+        
+     
+
+
+    </body>
+</html>

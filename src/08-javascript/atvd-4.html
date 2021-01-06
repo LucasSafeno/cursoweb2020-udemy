@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade de Fixação  - 4 </title>
+    <script>
+        var objetos = Array('Cadeira', 'Impressora', 'Garfo')
+
+        function adicionarObjeto(){
+
+            // Recuperar valores do objeto no input
+
+            var objeto = document.getElementById('objeto').value
+
+            if(objeto != ""){
+
+                // Verificar se o elemento já foi adicionado
+                if(objetos.indexOf(objeto) !== -1){
+                    alert('Objeto já inserido')
+                }else{
+                    objetos.push(objeto)
+                    console.log(objetos)
+
+                    document.getElementById('objeto').value = ""
+                }
+            } 
+
+        }
+
+
+        function ordenarObjeto(){
+            console.log(objetos.sort())
+        }
+
+    </script>
+</head>
+<body>
+    
+
+    <input type="text" id="objeto">
+    <button type="submit" onclick="adicionarObjeto()">Adicionar</button>
+    <button type="submit" onclick="ordenarObjeto()">Ordenar</button>
+
+ 
+  
+
+
+</body>
+</html>

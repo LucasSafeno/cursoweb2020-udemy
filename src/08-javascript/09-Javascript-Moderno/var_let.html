@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Moderno</title>
+        <meta charset="UTF-8">
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <script type="text/babel">
+          // 3 Escopos : Global, Função, Bloco
+
+            let serie = "Friends"
+
+            {
+                let serie = "The Walking Dead"
+                console.log('Dentro do bloco : ' + serie )
+            }
+                console.log('Fora do bloco : ' +  serie)
+
+
+
+/* VAR 
+           var serie =  "Friends" 
+
+           {
+               var serie = "The Walking Dead"
+               console.log('Dentro do bloco : ' + serie)
+           }
+
+           // dentro e fora do bloco será sobrecrescito a ultima ifnormação atribuida a variavel
+           // serie = "The Walking Dead"
+                console.log('Fora do bloco : ' +  serie)
+
+
+*/
+
+          
+        </script>
+
+    </head>
+    <body>
+        
+        <div id="output"></div>
+
+
+    </body>
+</html>

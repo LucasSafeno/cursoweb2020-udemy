@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Moderno</title>
+        <meta charset="UTF-8">
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <script type="text/babel">
+
+                let nome = "Lucas"
+                let idade = 26
+                let sexo = 'Masculino'
+                let profissao = 'Programador'
+
+
+            let objeto = {
+                nome: nome,
+                idade: idade,
+                sexo: sexo,
+                profissao: profissao,
+                exibirResumo: function(){
+                    console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao} `)
+                }
+            }
+
+
+            console.log(objeto)
+            objeto.exibirResumo()
+
+
+            // Melhorias ES6
+
+            let objeto2 = {
+                nome,
+                idade,
+                sexo,
+                profissao,
+                exibirResumo(){
+                    console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao} `)
+                }
+            }
+
+            console.log(objeto2)
+            objeto2.exibirResumo()
+
+
+        
+        </script>
+
+    </head>
+    <body>
+        
+
+     
+
+
+    </body>
+</html>

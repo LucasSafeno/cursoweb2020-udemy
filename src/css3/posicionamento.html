@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Posicionamento estático e relativo</title>
+	<meta charset="utf-8">
+	
+	<!-- CSS !-->
+	<style type="text/css">
+		
+		body{
+			background: #007fc7;
+		}
+
+		#container {
+			background: #FFF;
+			widows: 800px;
+			margin: 10px auto;	
+			padding: 10px;
+		}
+
+		h1 {
+			
+		}
+
+		p{
+			width: 300px;
+		}
+
+		.relative{
+			border: 1px solid red;
+			position: relative;
+			/*top, right, bottom e left*/
+			top: 20px;
+			left: 80px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="container">
+		<h1>Posicionamentos</h1>
+		<p>
+			P1 Cupidatat ut deserunt ea mollit amet aute in proident ea proident fugiat sed do enim laboris excepteur proident commodo fugiat tempor ut est anim qui est consectetur non et sit aliquip magna in do est labore.
+		</p>
+		
+		<p class="relative">
+			P3 Cupidatat ut deserunt ea mollit amet aute in proident ea proident fugiat sed do enim laboris excepteur proident commodo fugiat tempor ut est anim qui est consectetur non et sit aliquip magna in do est labore.
+		</p>
+		
+		<p>
+			P4 Cupidatat ut deserunt ea mollit amet aute in proident ea proident fugiat sed do enim laboris excepteur proident commodo fugiat tempor ut est anim qui est consectetur non et sit aliquip magna in do est labore.
+		</p>
+	</div>
+
+</body>
+</html>

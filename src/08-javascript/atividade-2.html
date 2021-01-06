@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Atividade 2</title>
+
+        <script>
+            var numero1 = prompt('Digite o primeiro número :')
+            numero1 = parseInt(numero1)
+            var operacao = prompt('Escolha a operção entre SOMA ou SUB ( sem acentos) :')
+            var numero2 = prompt('Digite o segundo número : ')
+            numero2 = parseInt(numero2)
+
+
+            if(operacao == 'soma'){
+                var resultado = numero1 + numero2
+                document.write('A soma de ' + numero1 + ' + ' + numero2 + ' é = : ' + resultado)
+            }else if(operacao == 'sub'){
+                var resultado = numero1 - numero2
+                document.write('A subtração de ' + numero1 + ' - ' + numero2 + ' é = : ' + resultado)
+            }else{
+                document.write('Escolha uma opção válida')
+            }
+
+
+
+
+        </script>
+
+
+    </head>
+    <body>
+
+    </body>
+</html>

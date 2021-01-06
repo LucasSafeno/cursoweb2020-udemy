@@ -1,0 +1,24 @@
+/* #### SELETORES UNIVERSAL ===== */
+
+*{
+	border: 2px solid red;
+}
+
+/* seletor texto */
+h1{
+	color: green;
+}
+
+p{
+	color: green;
+}
+
+span.azul{
+	color: blue;
+
+}
+
+/* seletor classe */
+.verde{
+	color: green;
+}

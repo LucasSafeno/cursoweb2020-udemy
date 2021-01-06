@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Moderno</title>
+        <meta charset="UTF-8">
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <script type="text/babel">
+        
+
+            class Animal{
+                     constructor(cor, tamanho, peso){
+                        this.cor = cor  
+                        this.tamanho = tamanho
+                        this.peso = peso
+                     }// fim constructor
+
+                dormir(){
+                    console.log('Dormir')
+                }
+
+            } // fim Animal
+
+            class Passaro extends Animal{
+                constructor(bico, cor, tamanho, peso){
+                    super(cor, tamanho, peso)
+                    this.bico = bico
+                } // fim contructor
+                voar(){
+                    console.log('voar')
+                }
+            } // fim Passaro
+
+            class Papagaio extends Passaro{
+                constructor(sabeFalar, cor, tamanho, peso){
+                    super(sabeFalar, cor, tamanho, peso)
+                    this.sabeFalar = sabeFalar
+                
+                }
+
+                falar(){
+                    console.log('Falar')
+                }
+
+
+            } // fim Papagaio   
+
+            let papagaio = new Papagaio(true, 'Verde', 25, 350)
+            console.log(papagaio)
+
+            let papagaio2 = new Papagaio(false, 'Branco', 10, 80)
+            console.log(papagaio2)
+
+    
+
+        </script>
+
+    </head>
+    <body>
+        
+     
+
+
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Moderno</title>
+        <meta charset="UTF-8">
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <script type="text/babel">
+        
+            //DESTRUCTURING = operador de desutruturação
+
+                // Arrays
+                
+                let  frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamão']
+
+               // let [ a,b, ,c] = frutas 
+               let [a, b, c, d, e = 'Banana'] = frutas
+
+                // console.log(a, b, c, d, e)
+
+                let coisas = [['Abacaxi', 'Uva', 'Pera', 'Mamão'], ['Lucas', 'Thauanna']]
+
+                let [, [, n2]] = coisas
+
+                let [[, , p]] = coisas
+
+                console.log(n2)
+                console.log(p)
+
+        </script>
+
+    </head>
+    <body>
+        
+     
+
+
+    </body>
+</html>

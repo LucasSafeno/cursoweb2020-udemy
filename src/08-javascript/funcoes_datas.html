@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+
+        <script>
+            /*
+            var data = new Date()
+
+            // document.write(data.getDate() + '/' + (data.getMonth() + 1) + '/' + data.getFullYear())
+
+
+            // Adicionar ou Remover dias
+            document.write(data.toString())  
+            document.write(data.setDate(data.getDate() + 300))          
+            document.write('<hr>')
+            document.write(data.toString())
+            */
+
+
+            // 15/01/2021
+            var data1 = new Date(2021, 0, 15)
+             // 14/10/2021
+            var data2 = new Date(2021, 9, 14)
+
+            document.write(data1.toString())
+            document.write('<hr>')
+            document.write(data2.toString())
+
+            // converter as datas para algo que possa calcular
+            document.write('<hr> <br> <br>')
+
+            document.write(data1.getTime())
+            document.write('<hr>')
+            document.write(data2.getTime())
+
+            var milisegundos_entre_datas = Math.abs(data1.getTime() - data2.getTime())
+            // encontrar a quantidade milisegundos entre data1 e data2
+            document.write('<hr> <br /> ')
+            document.write(milisegundos_entre_datas)
+
+            // 1 dia tem 24 horas, 1hora tem 60 minutos, cada minuto tem 1000 milisegundos
+            document.write('<hr> <br /> ')
+            var milisegundos_por_dia =  (1*24*60*60*1000)
+            document.write(' 1 dia tem ' + milisegundos_por_dia + ' milisegundos')
+            document.write('<hr> <br /> ')
+
+            document.write('A diferença entre data1 e data2 é de : ' +  milisegundos_entre_datas / milisegundos_por_dia + ' dias' )
+
+        </script>
+       
+    </head>
+    <body>
+        
+
+
+    </body>
+</html>
