@@ -11,6 +11,9 @@
         <script>
 
             function requisitarPagina(url){
+
+                document.getElementById('conteudo').innerHTML = ''
+
                 // incluir gif de loading
                 if(!document.getElementById('loading')){
                     let imgLoading = document.createElement('img')
@@ -25,6 +28,7 @@
 
                 let ajax = new XMLHttpRequest();
 
+
                 // requisição não iniciada, state = 0
                // console.log(ajax.readyState)
 
@@ -38,10 +42,19 @@
 
               // logica para ficar olhando progresso da req
                 ajax.onreadystatechange = () => {
-                  if(ajax.readyState == 4){
-                      console.log('requisição finalizada com sucesso')
-                      document.getElementById('loading').remove()
+                 
+                    if(ajax.readyState == 4 && ajax.status == 200){
+                      
+                        document.getElementById('conteudo').innerHTML = ajax.responseText
+                        //document.getElementById('loading').remove()                   
                   }
+
+                  if(ajax.readyState == 4 && ajax.status == 404){
+                      
+                      document.getElementById('conteudo').innerHTML ='... tente novamente mais tarde'
+                      //document.getElementById('loading').remove()                   
+                }
+
                 }
 
               ajax.send();
