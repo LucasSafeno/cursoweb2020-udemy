@@ -22,15 +22,55 @@
 
        $retorno =  $conexao->exec($query);
        echo $retorno;
-                */
+                
 
        $query = '
-            delete from tb_usuarios
-       ';
+           insert into tb_usuarios(
+               nome, email, senha)
+               values(
+                   "Lucas Tenorio", "lugnorio@gmail.com", "123456"
+                   )
+                ';
 
-       $retorno = $conexao->exec($query);
-       echo $retorno;
+        $conexao->exec($query);
 
+                ##########################
+
+        $query = '
+        insert into tb_usuarios(
+            nome, email, senha)
+            values(
+                "Thauanna Santos ", "ethauanna@gmail.com", "456789"
+                )
+                ';
+
+         $conexao->exec($query);
+
+                ##########################
+
+     $query = '
+     insert into tb_usuarios(
+         nome, email, senha)
+         values(
+             "Daniel Tenório", "dg.cavalcanti@gmail.com", "654321"
+             )
+            ';
+
+    $conexao->exec($query);
+       
+    */
+
+    $query =  '
+            select * from tb_usuarios
+    ';
+
+    $stmt = $conexao->query($query);
+
+    $lista = $stmt->fetchAll();
+
+    echo '<pre>';
+    print_r($lista);
+    echo '</pre>';
 
 
     }catch(PDOException $e){
