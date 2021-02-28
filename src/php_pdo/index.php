@@ -66,15 +66,25 @@
 
     $stmt = $conexao->query($query);
 
-    $lista = $stmt->fetchAll();
+    # Retorno apenas com indices associativos
+    // $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    # Retorno com indices numeros
+    // $lista = $stmt->fetchAll(PDO::FETCH_NUM);
+
+    # Retornos com indices numeros e associativos
+    //$lista = $stmt->fetchAll();
+
+    # Retorno Array de objetos
+    $lista = $stmt->fetchAll(PDO::FETCH_OBJ);
 
     echo '<pre>';
     print_r($lista);
     echo '</pre>';
 
-    echo $lista[0]['nome'];
+    echo $lista[0]->nome;
     echo '<br>';
-    echo $lista[2]['email'];
+    echo $lista[2]->email;
 
 
     }catch(PDOException $e){
