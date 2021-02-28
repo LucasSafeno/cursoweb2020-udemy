@@ -72,6 +72,10 @@
     print_r($lista);
     echo '</pre>';
 
+    echo $lista[0]['nome'];
+    echo '<br>';
+    echo $lista[2]['email'];
+
 
     }catch(PDOException $e){
         echo 'Erro : '.$e->getCode().' <br>Mensagem : '.$e->getMessage();
