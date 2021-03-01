@@ -61,7 +61,7 @@
     */
 
     $query =  '
-            select * from tb_usuarios
+            select * from tb_usuarios where id = 6
     ';
 
     $stmt = $conexao->query($query);
@@ -76,8 +76,16 @@
     //$lista = $stmt->fetchAll();
 
     # Retorno Array de objetos
-    $lista = $stmt->fetchAll(PDO::FETCH_OBJ);
+   // $lista = $stmt->fetchAll(PDO::FETCH_OBJ);
 
+   # Selecionar apenas um registro
+    $usuario  = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    print_r ($usuario['email']);
+
+
+
+/*
     echo '<pre>';
     print_r($lista);
     echo '</pre>';
@@ -85,7 +93,7 @@
     echo $lista[0]->nome;
     echo '<br>';
     echo $lista[2]->email;
-
+*/
 
     }catch(PDOException $e){
         echo 'Erro : '.$e->getCode().' <br>Mensagem : '.$e->getMessage();
