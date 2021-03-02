@@ -39,6 +39,15 @@
 
         public function atualizar(){ // update
 
+           #Query
+           $query = "UPDATE php_pdo.tb_tarefas set tarefa = :tarefa WHERE id = :id";
+           $stmt = $this->conexao->prepare($query);
+           $stmt->bindValue(':tarefa', $this->tarefa->__get('tarefa'));
+           $stmt->bindValue(':id', $this->tarefa->__get('id'));
+           if($stmt->execute()){
+                header("Location: todas_tarefas.php");
+           }
+
         }
 
         public function remover(){ // delete

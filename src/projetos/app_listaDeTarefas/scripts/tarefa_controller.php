@@ -34,6 +34,20 @@
         $tarefas = $tarefaService->recuperar();
         
 
+    }else if ($acao == 'atualizar'){
+       
+            #Instancia Tarefa
+            $tarefa = new Tarefa();
+            $tarefa->__set('id', $_POST['id']);
+            $tarefa->__set('tarefa', $_POST['tarefa_']);
+
+            #Conexao
+            $conexao = new Conexao();
+
+            #TarefaService
+            $tarefaService = new TarefaService($conexao, $tarefa);
+           echo $tarefaService->atualizar();
+
     }
 
 
