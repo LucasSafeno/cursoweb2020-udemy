@@ -5,18 +5,36 @@
     require "scripts/conexao.php";
 
 
+    $acao = isset($_GET['acao']) ? $_GET['acao'] : $acao;
 
-    # Instancia obj Tarefa
-    $tarefa = new Tarefa();
-    $tarefa->__set('tarefa', $_POST['tarefa']);
+    if($acao == 'inserir'){
 
-    $conexao = new Conexao();
+            # Instancia obj Tarefa
+            $tarefa = new Tarefa();
+            $tarefa->__set('tarefa', $_POST['tarefa']);
 
-    $tarefaService = new TarefaService($conexao, $tarefa);
-    $tarefaService->inserir();
+            $conexao = new Conexao();
+
+            $tarefaService = new TarefaService($conexao, $tarefa);
+            $tarefaService->inserir();
 
 
-    header("Location: nova_tarefa.php?inclusao=1");
+            header("Location: nova_tarefa.php?inclusao=1");
+    }else if($acao == 'recuperar'){
+        
+
+        # Instancia Tarefa
+        $tarefa = new Tarefa();
+
+        #Instancia Conexão
+        $conexao = new Conexao();
+
+        #instancia TarefaService
+        $tarefaService = new TarefaService($conexao, $tarefa);
+        $tarefas = $tarefaService->recuperar();
+        
+
+    }
 
 
 ?>

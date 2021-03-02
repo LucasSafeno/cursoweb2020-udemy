@@ -23,6 +23,16 @@
         }
 
         public function recuperar(){ // read
+            # Query
+            $query = 'SELECT
+                         t.id,s.status, t.tarefa
+                      FROM
+                         php_pdo.tb_tarefas as t
+                         LEFT JOIN php_pdo.tb_status as s on (t.id_status = s.id)';
+            $stmt = $this->conexao->prepare($query);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+
 
         }
 
