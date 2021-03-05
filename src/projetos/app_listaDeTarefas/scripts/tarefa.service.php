@@ -57,10 +57,22 @@
             $stmt->bindValue(':id', $this->tarefa->__get('id'));
             $stmt->execute();
 
-            
-
-
         }
+
+
+
+        public function marcarRealizada(){ // update
+
+            #Query
+            $query = "UPDATE php_pdo.tb_tarefas SET id_status = ? WHERE id = ?";
+            $stmt = $this->conexao->prepare($query);
+            $stmt->bindValue(1, $this->tarefa->__get('id_status'));
+            $stmt->bindValue(2, $this->tarefa->__get('id'));
+            if($stmt->execute()){
+                 header("Location: todas_tarefas.php");
+            }
+        }
+ 
 
     } # //TarefaService
 
