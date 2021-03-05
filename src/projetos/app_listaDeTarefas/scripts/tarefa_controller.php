@@ -38,8 +38,8 @@
        
             #Instancia Tarefa
             $tarefa = new Tarefa();
-            $tarefa->__set('id', $_POST['id']);
-            $tarefa->__set('tarefa', $_POST['tarefa_']);
+            $tarefa->__set('id', $_POST['id'])
+                    ->__set('tarefa', $_POST['tarefa_']);
 
             #Conexao
             $conexao = new Conexao();

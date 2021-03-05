@@ -40,10 +40,10 @@
         public function atualizar(){ // update
 
            #Query
-           $query = "UPDATE php_pdo.tb_tarefas set tarefa = :tarefa WHERE id = :id";
+           $query = "UPDATE php_pdo.tb_tarefas set tarefa = ? WHERE id = ?";
            $stmt = $this->conexao->prepare($query);
-           $stmt->bindValue(':tarefa', $this->tarefa->__get('tarefa'));
-           $stmt->bindValue(':id', $this->tarefa->__get('id'));
+           $stmt->bindValue(1, $this->tarefa->__get('tarefa'));
+           $stmt->bindValue(2, $this->tarefa->__get('id'));
            if($stmt->execute()){
                 header("Location: todas_tarefas.php");
            }
