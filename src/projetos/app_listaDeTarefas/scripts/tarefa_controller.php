@@ -7,6 +7,7 @@
 
     $acao = isset($_GET['acao']) ? $_GET['acao'] : $acao;
 
+ 
     if($acao == 'inserir'){
 
             # Instancia obj Tarefa
@@ -46,8 +47,19 @@
 
             #TarefaService
             $tarefaService = new TarefaService($conexao, $tarefa);
-           echo $tarefaService->atualizar();
+        if($tarefaService->atualizar()){
+                header("Location: todas_tarefas.php");
+        }
 
+    }else if($acao == 'remover'){
+            $tarefa = new Tarefa();
+            $tarefa->__set('id', $_GET['id']);
+
+            $conexao = new Conexao();
+
+            $tarefaService = new TarefaService($conexao, $tarefa);
+            $tarefaService->remover();
+            header("Location: todas_tarefas.php");
     }
 
 
