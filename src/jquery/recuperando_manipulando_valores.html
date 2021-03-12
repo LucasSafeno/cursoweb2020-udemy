@@ -9,9 +9,15 @@
 	<script src="jquery-3.3.1.js"></script>
 
 	<script>
+		/*
 		$(document).ready( () =>{
 
+			$.each($('.interesse:checked'),(indice, valor) => {
+				console.log(indice, valor.value)
+			})
+
 		})
+		*/
 	</script>
 
 </head>
@@ -27,6 +33,18 @@
 		<option value="3">Radio</option>
 		<option value="4">Outros meios</option>
 	</select>
+	<br>
+
+	<p>Genero :</p>
+	<input type="radio" name="sexo" class="sexo" value="f">Femenino
+	<input type="radio" name="sexo" class="sexo" value="m">Masculino
+	<br>
+
+	<p>Interesses : </p>
+	<input type="checkbox" name="interesse" class="interesse" value="php">PHP
+	<input type="checkbox" name="interesse" class="interesse" value="js">JavaScript
+	<input type="checkbox" name="interesse" class="interesse" value="angular">Angular
+	<input type="checkbox" name="interesse" class="interesse" value="nodejs">NodeJS
 
 	
 </body>
