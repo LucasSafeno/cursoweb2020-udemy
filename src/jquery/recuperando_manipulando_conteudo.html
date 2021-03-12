@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Configurando e Testando JQuery</title>
+
+	<!-- JQUERY !-->
+	<script src="jquery-3.3.1.js"></script>
+
+
+	<script>
+		$(document).ready(function(){
+
+			console.log('Conteudo div 1 :',$('#div1').html())
+			console.log('Conteudo div 2 :',$('#div2').html())
+
+
+		})
+	</script>
+
+
+</head>
+<body>
+
+	<div id="div1" style="border: solid 1px #000; width: 150px; height: 150px;">
+		<a href="#">Teste</a>
+		<p>Esse é um texto</p>
+		<div>
+			Outro teste
+		</div>
+	</div>
+
+	<div id="div2" style="border: solid 1px #000; width: 150px; height: 150px;">
+		Div 2
+	</div>
+
+
+	
+</body>
+</html>
