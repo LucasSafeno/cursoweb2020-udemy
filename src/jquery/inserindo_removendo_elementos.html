@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inserindo e Removendo Elementos</title>
+
+	<!-- JQUERY !-->
+	<script src="jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(() => {
+            $('#lista1').prepend('<li>Item 4</li>')
+            $('#lista2').append('<div>Item novo</div>')
+
+            $('#lista2').after('<p>Eu fui inserido apos a div</p>')
+            $('#lista2').before('<p>EU fui inserido antes da div</p>')
+
+            $('#linha').remove()
+        })
+    </script>
+
+
+</head>
+<body>
+
+        <ul id="lista1">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <div id="lista2">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+        </div>
+
+        <hr id="linha">
+
+
+	<!-- JQuery !-->
+	<script>
+		
+	</script>
+	
+</body>
+</html>
