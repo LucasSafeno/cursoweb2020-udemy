@@ -142,26 +142,16 @@
 
 		  */
 
-		  $('#nome').focus((e) =>{
-			  console.log('Recebeu Foco (nome)')
+		  $('#nome, #email').focus((e) =>{
+			  console.log('Recebeu Foco')
 			  $(e.target).addClass('inputFocado')
 		  })
 
-		  $('#email').focus((e) =>{
-			  console.log('Recebeu Foco (email)')
-			  $(e.target).addClass('inputFocado')
-		  })
-
-		  $('#nome').blur((e) =>{
-			  console.log('Perdeu Foco (nome)')
+		  $('#nome, #email').blur((e) =>{
+			  console.log('Perdeu Foco')
 			  $(e.target).removeClass('inputFocado')
 		  })
-
-		  $('#email').blur((e) =>{
-			  console.log('Perdeu Foco (email)')
-			  $(e.target).removeClass('inputFocado')
-		  })
-		  
+  
 		  
 		  $('#opcao').change((e) => {
 			  console.log('Opção foi modificada')
