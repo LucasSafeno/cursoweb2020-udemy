@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <style>
+        .desfocado{
+            background-color: white;
+        }
+
+        .focado{
+            background-color: green;
+        }
+    </style>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Eventos - Registrando/Removendo Eventos com on/off</title>
+
+	<!-- JQUERY !-->
+	<script src="jquery-3.3.1.js"></script>
+
+    <script>
+        $(document).ready(() =>{
+
+            $('body').on('focus','input' ,e =>{
+                $(e.target).removeClass('desfocado')
+                $(e.target).addClass('focado')
+            })
+
+            $('body').on('blur','input', e =>{
+                $(e.target).removeClass('focado')
+                $(e.target).addClass('desfocado')
+            })
+
+            $('body').append('<br> <br> <input type="text" class="desfocado" />')
+
+        })
+
+    </script>
+
+</head>
+<body>
+
+    <input type="text" class="desfocado">
+
+
+
+	
+</body>
+</html>
