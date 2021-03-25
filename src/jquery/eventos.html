@@ -5,7 +5,18 @@
 		<title>jQuery</title>
 
 		<style>
+			#divExterna{
+				background-color: #ccc;
+				width: 80px;
+				height: 80px;
+				padding: 70px;
+			}
 			
+			#divInterna{
+				width: 80px;
+				height: 80px;
+				background-color: blue;
+			}
 		</style>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -13,6 +24,8 @@
 
 			$(document).ready(() => {
 				$('#onload').html('pagina carregada')
+
+				// Browser Event
 
 				$(window).scroll(()=>{
 					$('#scroll').html('Scroll Acionado')
@@ -27,7 +40,80 @@
 				$(this).css('background-color', 'blue')
 			})
 
-		})
+			
+		 // Mouse Event
+
+		 $('#btn1').mousedown(() =>{
+			 $('#div2').css('background-color', 'green')
+		 })
+
+		 $('#btn1').mouseup(() =>{
+			 $('#div2').css('background-color', 'blue')
+		 })
+
+
+		 $('#btn2').dblclick(() => {
+			 $('#div2').css('background-color', 'yellow')
+		 })
+
+		 $('#div2').mousemove((e) =>{
+			 console.log(e.offsetX, e.offsetY)
+			 $('#resultadodiv').html('X : ' + e.offsetX + ' / Y : ' + e.offsetY)
+		 })
+
+		 // Mouse Over / Mouse Out ( antigos)
+		
+		/* 
+		 $('#divExterna').mouseover(() => {
+			 $('#resultadodiv1').html('Entrou')
+			 console.log('Div Externa Entrou')
+		 })
+
+		 $('#divExterna').mouseout(() => {
+			$('#resultadodiv1').html('Saiu')
+			console.log('Div Externa saiu')
+		}) 
+
+		$('#divInterna').mouseover(() => {
+			 $('#resultadodiv2').html('Entrou')
+			 console.log('Div Interna Entrou')
+		 })
+
+		 $('#divInterna').mouseout(() => {
+			$('#resultadodiv2').html('Saiu')
+			console.log('Div Externa SAiu')
+		}) 
+		
+			*/
+		 
+
+		 // Mouse Enter / Mouse Leave ( Novos)
+
+		 
+		 $('#divExterna').mouseenter(() => {
+			 $('#resultadodiv1').html('Entrou')
+			 console.log('Div Externa Entrou')
+		 })
+
+		  $('#divExterna').mouseleave(() => {
+			$('#resultadodiv1').html('Saiu')
+			console.log('Div Externa saiu')
+		  })
+
+
+		  $('#divInterna').mouseenter(() => {
+			 $('#resultadodiv2').html('Entrou')
+			 console.log('Div Externa Entrou')
+		 })
+
+		  $('#divInterna').mouseleave(() => {
+			$('#resultadodiv2').html('Saiu')
+			console.log('Div Externa saiu')
+		  })
+		  
+
+		}) // end
+
 		</script>
 	</head>
 
@@ -51,10 +137,24 @@
 			<hr />
 
 			<h3>Mouse</h3>
-			<button type="button">Clique aqui</button>
-			<button type="button">Clique aqui 2x</button>
-			<div style="background-color: red; width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px"></div>
-			<span>Resultado do evento sobre a div</span>
+			<button id="btn1" type="button">Clique aqui</button>
+			<button id="btn2" type="button">Clique aqui 2x</button>
+			<div id="div2" style="background-color: red; width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px"></div>
+			<span>Resultado do evento sobre a div</span><span id="resultadodiv"> </span>
+
+
+
+			
+			<div id="divExterna">
+				<div id="divInterna">
+					>
+				</div>
+
+			</div>
+				<span>Div Externa : </span><span id="resultadodiv1"></span>
+				<br>
+					<span>Div Interna : </span><span id="resultadodiv2"></span>
+			
 			<hr />
 
 			<h3>Teclado</h3>
