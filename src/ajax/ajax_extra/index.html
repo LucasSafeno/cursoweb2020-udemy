@@ -23,6 +23,7 @@
 					$.ajax({
 						type: 'get',
 						url: 'app.php',
+						dataType: 'json',
 						data: dados,
 						success: dados =>{console.log(dados)},
 						error: erro => {console.log(erro)}
