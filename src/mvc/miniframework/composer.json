@@ -3,16 +3,16 @@
     "require": {
         "php": ">= 7.0"
     },
-    "authors":[
+    "authors": [
         {
-            "name": "Lucas Safeno",
-            "email": "lugnorio@gmail.com"
+            "name": "Lucas Tenório",
+            "email": "lucastenorio.ti@gmail.com"
         }
     ],
     "autoload": {
-        "psr-4":{
+        "psr-4": {
             "App\\": "App/",
             "MF\\": "vendor/MF/"
         }
     }
-} 
+}
