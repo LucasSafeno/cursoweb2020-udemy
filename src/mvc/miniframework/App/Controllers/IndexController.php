@@ -11,14 +11,14 @@
         public function index(){
 
             $this->view->dados = array('Sofá', 'Cadeira', 'Cama');
-            $this->render('index');
+            $this->render('index', 'layout3');
 
         } # [index()]
 
         public function sobreNos(){
 
             $this->view->dados = array('Notebook', 'Smartphone');
-            $this->render('sobreNos');
+            $this->render('sobreNos', 'layout2');
 
         }# [/sobreNos]
 
