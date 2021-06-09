@@ -7,7 +7,7 @@
 
             try{
                 $conn = new \PDO (
-                    "mysql:host=localhost;dbaname=mvc;charset=utf8",
+                    "mysql:host=localhost;dbname=mvc;charset=utf8",
                     "root",
                     "160819"
                 );

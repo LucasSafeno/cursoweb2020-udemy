@@ -1,22 +1,20 @@
 <?php
-    namespace App\Models;
 
-    class Produto{
+namespace App\Models;
 
-        protected $db;
+class Produto {
 
-        public function __construct(\PDO $db){
-            $this->db = $db;
-        } # [/Construct ()]
+	protected $db;
 
-        public function getProdutos(){
-            
+	public function __construct(\PDO $db) {
+		$this->db = $db;
+	}
 
-            $query = "SELECT id, descricao, preco FROM tb_produtos";
-            return $this->db->query($query)->fetchAll(FECTH_ASSOC);
-
-        }# [/getProdutos()]
-
-    } # [/Produto]
+	public function getProdutos() {
+		
+		$query = "select id, descricao, preco from tb_produtos";
+		return $this->db->query($query)->fetchAll();
+	}
+}
 
 ?>
