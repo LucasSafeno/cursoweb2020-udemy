@@ -8,12 +8,12 @@
     class AuthController extends Action{
 
         # Autenticar
-        public function Autenticar(){
+        public function autenticar(){
            
             # Cria Instancia Modelo Usuario para seta valores
             $usuario = Container::getModel('Usuario');
             $usuario->__set('email', $_POST['email']);
-            $usuario->__set('senha', $_POST['senha']);
+            $usuario->__set('senha', md5($_POST['senha']));
 
             # Metodo para chegar no BD se o usario Existe
             $usuario->autenticar();
