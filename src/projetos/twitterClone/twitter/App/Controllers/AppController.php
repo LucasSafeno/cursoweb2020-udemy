@@ -98,6 +98,24 @@ class AppController extends Action{
 
     } # [/acao()]
 
+    public function remover(){
+        $this->validaAutenticacao();
+
+        $remover = isset($_['remover']) ? $_['remover'] : '';
+
+
+        $tweet = Container::getModel('Tweet');
+        $tweet->__set('id', $_GET['remover']);
+
+        $tweet->remover();
+
+        header('Location: /timeline');
+        
+
+    
+   
+    } # [/remover()]
+
 
 } # [/AppController]
 ?>
