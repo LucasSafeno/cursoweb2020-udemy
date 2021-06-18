@@ -79,7 +79,6 @@
 
 			<div class="row tweet">
 
-	
 				<div class="col">
 					<p><strong><?= $tweet['nome']?></strong> <small> <span class="text text-muted">- <?=$tweet['data']?></span></p></small>
 					<p><?= $tweet['tweet']?></p>
@@ -96,7 +95,22 @@
 				</div>
 			</div>
 		<?php } ?>
+
 		
+		<div class="row mt-5">
+			<nav aria-label="Page navigation example">
+				<ul class="pagination">
+					<li class="page-item"><a class="page-link" href="?pagina=1">Primeira</a></li>
+						<?php for($i = 1; $i <= $this->view->total_de_paginas; $i++){ ?>
+
+					<li class="page-item"><a class="page-link" href="?pagina=<?=$i?>"><?=$i?></a></li>
+
+					<?php } ?>
+					<li class="page-item"><a class="page-link" href="?pagina=<?=$this->view->total_de_paginas?>">Ultima</a></li>
+				</ul>
+			</nav>
+		</div>
+				
 
 
 		</div>
